@@ -49,9 +49,9 @@ header .logo img{
     border-radius: 50%;
 }
 
-header .logo #menuBtn{
+header .cartUser #menuBtn{
     font-size: 30px;
-    /* display: none; */
+    display: none;
     cursor: pointer;
     /* display: none; is to hide it in the desktop screen because we will not need it untill we get to mobile screen. */
 }
@@ -177,4 +177,109 @@ header .cartUser i{
     float: right;
     flex-direction: row;
     
+}
+
+@media (max-width: 500px){
+    header{
+        height: 80px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        /* this is just like saying top and bottom padding 0px, left and right 50px */
+        background-color: white;
+        border: solid 5px red;
+    }
+    
+    
+    header .logo{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: dashed;
+    }
+    
+    header .logo img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    
+    header .cartUser #menuBtn{
+        font-size: 30px;
+        display: flex;
+        cursor: pointer;
+        /* display: none; is to hide it in the desktop screen because we will not need it untill we get to mobile screen. */
+    }
+    
+    
+    
+    header .desktopNav{
+        width: 40%;
+        height: 100%;
+        display: none;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    header .desktopNav ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    
+    header .desktopNav ul li{
+        list-style: none;
+    }
+    
+    header .desktopNav ul li a{
+        color: var(--vanillaGreen);
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    header .mobileNav{
+        display: flex;
+        height: 100vh;
+        width: 60vw;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 20px;
+
+    }
+
+    header .mobileNav #closebtn{
+        font-size: 25px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    
+    header .cartUser{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    header .cartUser i{
+        font-size: 20px;
+        cursor: pointer;
+    }
 }
